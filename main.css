@@ -1,0 +1,154 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: auto;
+    transform: all 0.5;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+.loading_bar{
+    position: absolute;
+    top:80%;
+    width: 100% ;
+    height: 2px;
+    z-index: 2;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 1.5s;
+    will-change: transform; 
+}
+.loading_bar.ended{
+    /* transform: scaleX(0); */
+    transform-origin: top right;
+    transition: transform 1.5s ease-in-out;
+}
+
+.overlay{
+    position: absolute;
+    opacity: 1;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    transition: opacity 3s;
+
+}
+
+.satList{
+    left: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 260px ;
+    height: 0vh;
+    /* background-color: rgb(255, 255, 255); */
+}
+.sat{
+    transition: all 1.5s;
+}
+
+.sat.active{
+    opacity: 1;
+}
+.sat.nonactive {
+    opacity: 0;
+    /* display: none; */
+}
+.sat{
+    opacity: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #1a1a1a80;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-left: 5px;   
+    border-top:solid 3px whitesmoke;
+    border-bottom:solid 3px whitesmoke;
+    pointer-events: none;
+}
+.sat h1{
+    color: white;
+}
+.sat .title {
+    font-size: 30px;
+    font:  'Lucida Grande', sans-serif;
+    color: whitesmoke ;
+    text-align:  center;
+}
+.sat pre {
+    font-size: 16px;
+    color: #2FA1D6;
+    text-align:  start;
+    margin-left: 10px;
+}
+
+.sat.collision{
+    background-color: rgba(122, 0, 0, 0.747);
+}
+.sat.collision pre{
+    display: none;
+}
+.sat.collision .collisionactive{
+    font-size: 50px;
+    text-align: center;
+}
+.sat.removed{
+    background-color: rgba(0, 70, 43, 0.747);
+}
+.sat.removed pre{
+    display: none;
+}
+.sat.removed .removedactive{
+    font-size: 50px;
+    text-align: center;
+}
+.sat.draging{
+    background-color: rgba(5, 0, 73, 0.671);
+}
+.sat.draging pre{
+    display: none;
+}
+.sat.draging .dragingactive{
+    font-size: 50px;
+    text-align: center;
+}
+.timeSpeed{
+    pointer-events: none;
+    position: absolute;
+    top: 90%;
+    left: 43%;
+    background-color: #3030308f;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border-left: solid 4px #2fa1d6;
+    border-right: solid 4px #2fa1d6;
+}
+.timeSpeed .Timeh1{
+    text-align: center;
+    font-size: 25px;
+    color: #2fa1d6;
+}
+.timeSpeed .calcT{
+    text-align: center;
+    font-size: 18px;
+    color: #f8f8f8;
+    margin-top: 5px;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
